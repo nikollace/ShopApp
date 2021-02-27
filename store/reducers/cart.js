@@ -1,6 +1,7 @@
 import { ADD_TO_CART, REMOVE_FROM_CART } from "../actions/cart";
 import CartItem from '../../models/cart-item'
 import { StackRouter } from "react-navigation";
+import { ADD_ORDER } from "../actions/orders";
 
 const initialState = {
     items: {},
@@ -59,8 +60,11 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 items: updatedCartItems,
-                totalAmount: state.totalAmount - selectedCartItem.price
+                totalAmount: state.totalAmount - selectedCartItem.productPrice
             }
+            //ciscenje korpe
+            case ADD_ORDER:
+                return initialState;
     }
     return state;
 };
