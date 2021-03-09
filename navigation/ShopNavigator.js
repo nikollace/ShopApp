@@ -9,6 +9,7 @@ import ProductDetailScreen from '../screens/shop/ProductDetailScreen'
 import CartScreen from '../screens/shop/CartScreen'
 import OrdersScreen from '../screens/shop/OrdersScreen'
 import UserProductScreen from '../screens/user/UserProductsScreen'
+import EditProductScreen from '../screens/user/EditProductScreen'
 import Colors from '../constants/Colors'
 import { Ionicons } from '@expo/vector-icons';
 
@@ -63,7 +64,8 @@ const OrdersNavigator = createStackNavigator({
     });
 
 const AdminNavigator = createStackNavigator({
-    UserProducts: UserProductScreen
+    UserProducts: UserProductScreen,
+    EditProduct: EditProductScreen
 },
     {
         //ovaj navigation ce raditi samo ako je ovaj OrdersNavigator
